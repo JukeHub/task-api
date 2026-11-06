@@ -8,7 +8,7 @@ export async function getTasks(req, res, next) {
     filter = completed === 'true';
   }
 
-  const tasks = await taskService.getAllTasks();
+  const tasks = await taskService.getAllTasks(filter);
   res.json(tasks);
 }
 
